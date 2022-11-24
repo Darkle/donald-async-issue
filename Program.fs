@@ -22,9 +22,9 @@ let main args =
     }
     |> ignore
 
-    let sql1 = "INSERT INTO Test (foo) VALUES (@foo);"
+    let sql1 = "INSERT INTO Asd (foo) VALUES (@foo);"
 
-    let sqlParams1 = [ ("non-existant-column", SqlType.String "bar") ]
+    let sqlParams1 = [ ("foo", SqlType.String "bar") ]
 
     let sqlToExec1 = conn |> Db.newCommand sql1 |> Db.setParams sqlParams1
 
